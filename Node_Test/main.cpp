@@ -10,9 +10,7 @@ DigitalOut myled2(LED2);
 
 int main() {
 
-// The nRF24L01+ supports transfers from 1 to 32 bytes, but Sparkfun's
-//  "Nordic Serial Interface Board" (http://www.sparkfun.com/products/9019)
-//  only handles 4 byte transfers in the ATMega code.
+// Upto 24 seems to work, 32 seems not to work..?
 #define TRANSFER_SIZE   4
 
     char txData[TRANSFER_SIZE], rxData[TRANSFER_SIZE];
